@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+option go_package = "/pb";
+
+
+package pb;
+
+message SearchRequest {
+  string query = 1;
+  int32 page_number = 2;
+  int32 result_per_page = 3;
+}
+
+//protoc --go_out=. test.proto
